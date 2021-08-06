@@ -14,16 +14,16 @@ public class TransactionApp {
 
             switch (userInput) {
                 case "1":
-                    TransactionAdd.main(new String[0]);
+                    TransactionAdd.add();
                     break;
                 case "2":
-                    TransactionUpdate.main(new String[0]);
+                    TransactionUpdate.update();
                     break;
                 case "3":
-                    TransactionDelete.main(new String[0]);
+                    TransactionDelete.delete();
                     break;
                 case "4":
-                    TransactionRead.main(new String[0]);
+                    TransactionRead.read();
                     break;
                 case "0":
                     return;
@@ -31,6 +31,5 @@ public class TransactionApp {
                     System.out.println("Błędny wybór!");
             }
         }
-
     }
 }

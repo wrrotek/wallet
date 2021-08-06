@@ -1,22 +1,22 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Transaction {
 
     private Long id;
-    private String type;
+    private String transactionType;
     private String description;
     private double amount;
-    private String date;
+    private LocalDate date;
 
-    public Transaction(Long id, String type, String description, double amount, String date) {
+    public Transaction(Long id, String type, String description, double amount, LocalDate date) {
         this.id = id;
-        this.type = type;
+        transactionType = type;
         this.description = description;
         this.amount = amount;
         this.date = date;
     }
 
-    public Transaction(String type, String description, double amount, String date) {
+    public Transaction(String type, String description, double amount, LocalDate date) {
         this(null, type, description, amount, date);
     }
 
@@ -29,11 +29,11 @@ public class Transaction {
     }
 
     public String getType() {
-        return type;
+        return transactionType;
     }
 
     public void setType(String type) {
-        this.type = type;
+        transactionType = type;
     }
 
     public String getDescription() {
@@ -52,11 +52,11 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public String getDate() {
-        return  date;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setDate(String date) {
+    public void setLocalDate(LocalDate date) {
         this.date = date;
     }
 
@@ -64,10 +64,15 @@ public class Transaction {
     public String toString() {
         return "Transaction{" +
                 "id=" + id +
-                ", type='" + type + '\'' +
+                ", type='" + transactionType + '\'' +
                 ", description='" + description + '\'' +
                 ", amount=" + amount +
                 ", date=" + date +
                 '}';
     }
+
+    public enum type {
+        WPŁATA, WYPŁATA
+    }
 }
+

@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class TransactionDelete {
-    public static void main(String[] args) {
-
+    public static void delete() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Usuwanie");
         System.out.println("Podaj Id tansakcji");
